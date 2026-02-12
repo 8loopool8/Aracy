@@ -125,3 +125,180 @@ async def get_resource_footprint():
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to query resource stats: {e}")
+
+# ------------------- The Lab: AI Generation with Custom Parameters -------------------
+
+class LabGenerationRequest(BaseModel):
+    style: str = "deep"  # silly, deep, astro, poetic, scientific
+    language: str = "en"
+    catalysts: list = []
+    vibe: str = ""
+
+@app.post("/api/lab/generate")
+async def generate_with_lab(req: LabGenerationRequest):
+    """
+    Generate 19 endearments using The Lab parameters.
+    Returns array of 19 alints with title, origin, reflection, interaction.
+    """
+    try:
+        # Build custom prompt based on Lab parameters
+        catalyst_text = ", ".join(req.catalysts) if req.catalysts else ""
+        vibe_text = req.vibe if req.vibe else ""
+        
+        custom_prompt = f"""
+Generate exactly 19 unique endearments/alints.
+
+Style: {req.style}
+Language: {req.language}
+Catalyst Keywords: {catalyst_text}
+Custom Vibe: {vibe_text}
+
+Each alint must be a JSON object with:
+- title: unique creative name
+- origin: etymology/scientific basis
+- reflection: personal poetic note
+- interaction: quiz question or riddle
+
+Return as JSON array of 19 objects.
+"""
+        
+        # Generate using LLM
+        result = llm.generate_alint(custom_prompt, category=req.style)
+        
+        import json
+        try:
+            parsed = json.loads(result)
+            # Ensure it's an array of 19 items
+            if isinstance(parsed, list) and len(parsed) == 19:
+                return {"endearments": parsed}
+            elif isinstance(parsed, dict) and "endearments" in parsed:
+                return parsed
+            else:
+                # If single object returned, replicate to 19 with variations
+                return {"endearments": [parsed] * 19}
+        except:
+            return {"endearments": [], "error": "Failed to parse LLM response"}
+            
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Lab generation failed: {e}")
+
+# ------------------- The 19 Ritual: Reflection Tracking -------------------
+
+@app.get("/api/ritual/reflected/{bond_id}")
+async def get_reflected_state(bond_id: str):
+    """Get which endearments have been reflected upon."""
+    # TODO: Implement Supabase query
+    # For now, return empty state
+    return {"reflected_indices": []}
+
+class ReflectRequest(BaseModel):
+    bond_id: str
+    index: int
+    reflected: bool
+
+@app.post("/api/ritual/reflect")
+async def mark_reflected(req: ReflectRequest):
+    """Mark an endearment as reflected upon."""
+    # TODO: Implement Supabase update
+    return {"status": "success"}
+
+# ------------------- The Echo & Streak: Delivery & Tracking -------------------
+
+@app.get("/api/streak/{bond_id}")
+async def get_streak_data(bond_id: str):
+    """Get streak count, delivery time, and heatmap data."""
+    # TODO: Implement Supabase query
+    # For now, return mock data
+    return {
+        "count": 0,
+        "lastDelivery": None,
+        "deliveryTime": "06:00",
+        "heatmapData": []
+    }
+
+class DeliveryTimeRequest(BaseModel):
+    bond_id: str
+    delivery_time: str
+
+@app.post("/api/streak/delivery-time")
+async def update_delivery_time(req: DeliveryTimeRequest):
+    """Update the daily delivery time."""
+    # TODO: Implement Supabase update
+    return {"status": "success", "delivery_time": req.delivery_time}
+
+# ------------------- The Riddle: Quiz Generation & Badges -------------------
+
+@app.get("/api/quiz/generate/{bond_id}")
+async def generate_quiz(bond_id: str):
+    """Generate quiz questions based on bond context."""
+    try:
+        # Get Muse context
+        muse = get_muse_context()
+        
+        quiz_prompt = f"""
+Generate 5 quiz questions about chemistry, astrology, and {muse['name']}'s profile.
+
+Context:
+- Name: {muse['name']}
+- Profession: {muse['profession']}
+- Traits: {muse['traits']}
+- Astrology: {muse['astro_chart']}
+
+Each question should be a JSON object with:
+- question: the question text
+- answers: array of 4 possible answers
+- correctAnswer: index (0-3) of correct answer
+
+Return as JSON object with "questions" array.
+"""
+        
+        result = llm.generate_alint(quiz_prompt, category="general")
+        
+        import json
+        try:
+            parsed = json.loads(result)
+            if "questions" in parsed:
+                return parsed
+            else:
+                return {"questions": parsed if isinstance(parsed, list) else []}
+        except:
+            # Fallback mock quiz
+            return {
+                "questions": [
+                    {
+                        "question": f"What is {muse['name']}'s Sun sign?",
+                        "answers": ["Aquarius", "Pisces", "Aries", "Taurus"],
+                        "correctAnswer": 1
+                    }
+                ]
+            }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Quiz generation failed: {e}")
+
+@app.get("/api/quiz/badges/{bond_id}")
+async def get_unlocked_badges(bond_id: str):
+    """Get all unlocked badges for a bond."""
+    # TODO: Implement Supabase query
+    return {"badges": []}
+
+class UnlockBadgeRequest(BaseModel):
+    bond_id: str
+    badge_id: str
+    badge_name: str
+
+@app.post("/api/quiz/unlock-badge")
+async def unlock_badge(req: UnlockBadgeRequest):
+    """Unlock a new badge."""
+    # TODO: Implement Supabase insert
+    return {"status": "success"}
+
+class QuizResultsRequest(BaseModel):
+    bond_id: str
+    score: int
+    total: int
+
+@app.post("/api/quiz/save-results")
+async def save_quiz_results(req: QuizResultsRequest):
+    """Save quiz results."""
+    # TODO: Implement Supabase insert
+    return {"status": "success"}

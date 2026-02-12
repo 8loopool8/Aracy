@@ -3,3 +3,8 @@ uvicorn
 google-generativeai
 pydantic
 psutil
+groq
+uvicorn
+groq
+python-dotenv
+supabase
