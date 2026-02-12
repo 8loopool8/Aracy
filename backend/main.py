@@ -1,15 +1,14 @@
 from fastapi import FastAPI, Depends, HTTPException
 from pydantic import BaseModel
-from backend.gemini_wrapper import GeminiWrapper
+from llm_wrapper import LLMWrapper
 import os
-from backend.config import get_muse_context
-from backend.logger import log_error, get_errors, ignore_error, get_memory_usage_mb
+from config import get_muse_context
+from logger import log_error, get_errors, ignore_error, get_memory_usage_mb
 
 app = FastAPI(title="ARACY Backend")
 
-# Placeholder for actual Gemini API key retrieval, use env variable
-API_KEY = os.environ.get("GEMINI_API_KEY", "demo-key")
-gemini = GeminiWrapper(api_key=API_KEY)
+# Initialize LLM wrapper (uses Groq with Model Hunter)
+llm = LLMWrapper()
 
 @app.get("/health")
 async def health():
@@ -25,7 +24,7 @@ async def generate_alint(prompt: str = Body("", embed=True)):
     Returns a strict JSON object as per Mirror Lab codex.
     """
     try:
-        result = gemini.generate_alint(prompt)
+        result = llm.generate_alint(prompt)
         # Try to parse result as JSON if it's a string
         import json
         try:
@@ -99,7 +98,7 @@ async def get_resource_footprint():
     try:
         import platform
         import psutil
-        from backend.logger import estimate_token_count
+        from logger import estimate_token_count
 
         mem_mb = get_memory_usage_mb()
         cpu_percent = psutil.cpu_percent(interval=0.2)
