@@ -9,8 +9,8 @@ No hardcoded personal data. All context is injected at runtime from config.py.
 """
 
 import google.generativeai as genai
-from .config import get_muse_context, get_api_keys
-from .logic_protocols.mirror_config import get_identity_prompt
+from config import get_muse_context, get_api_keys
+from logic_protocols.mirror_config import get_identity_prompt
 
 
 class GeminiWrapper:
@@ -19,7 +19,7 @@ class GeminiWrapper:
     Tries latest models first, falls back to stable versions if unavailable.
     """
     
-    def __init__(self, api_key: str = None, preferred_models: list = None):
+    def __init__(self, api_key=None, preferred_models=None):
         """
         Initialize the Gemini wrapper with API key and model preferences.
         
@@ -29,12 +29,12 @@ class GeminiWrapper:
         """
         if preferred_models is None:
             preferred_models = [
-                "gemini-2.0-flash-exp",      # Latest experimental (fastest)
-                "gemini-2.0-flash-thinking-exp",  # Thinking mode
-                "gemini-1.5-pro-latest",     # Latest stable pro
-                "gemini-1.5-pro",            # Stable pro
-                "gemini-1.5-flash",          # Fast stable
-                "gemini-pro",                # Legacy fallback
+                "gemini-2.0-flash-exp",
+                "gemini-2.0-flash-thinking-exp",
+                "gemini-1.5-pro-latest",
+                "gemini-1.5-pro",
+                "gemini-1.5-flash",
+                "gemini-pro",
             ]
         
         # Load API key from config if not provided
@@ -82,7 +82,7 @@ class GeminiWrapper:
             print(f"⚠ Model listing failed: {e}. Attempting direct connection...")
             self.available_model = self.preferred_models[0]
     
-    def generate_alint(self, prompt: str = None, category: str = "general") -> str:
+    def generate_alint(self, prompt=None, category="general"):
         """
         Generate an 'alint' (affectionate intelligence) using the Mirror Lab engine.
         
@@ -137,7 +137,7 @@ class GeminiWrapper:
         except Exception as e:
             raise RuntimeError(f"Gemini generation failed: {e}")
     
-    def generate_bond_name(self) -> str:
+    def generate_bond_name(self):
         """
         Generate a mystical bond name for the couple using cosmic alchemy.
         
@@ -178,7 +178,7 @@ Generate the bond name now:
             return "STELLAR UNION"
 
 
-def build_muse_prompt(base_prompt: str) -> str:
+def build_muse_prompt(base_prompt):
     """
     Legacy function for backward compatibility.
     Incorporates Muse context into a base prompt.
@@ -198,3 +198,78 @@ def build_muse_prompt(base_prompt: str) -> str:
         f"Astro Chart:\n{muse['astro_chart']}\n"
     )
     return f"{muse_desc}\n{base_prompt}"
+
+
+def generate_alint(name, profession, traits, astro_full_chart, category="general", prompt=None):
+    """
+    Standalone function to generate an alint with explicit parameters.
+    This is the main export function that can be imported directly.
+    
+    Args:
+        name: The Muse's name
+        profession: The Muse's professional identity
+        traits: The Muse's personality traits and interests
+        astro_full_chart: Complete formatted astrological chart
+        category: Type of alint (general, silly, deep, astro)
+        prompt: Optional additional user prompt
+    
+    Returns:
+        Generated JSON string containing the alint
+    """
+    # Get API key from config
+    api_keys = get_api_keys()
+    api_key = api_keys['gemini_api_key']
+    
+    # Configure Gemini
+    genai.configure(api_key=api_key)
+    
+    # Build the identity prompt with injected data
+    identity_prompt = get_identity_prompt(
+        name=name,
+        profession=profession,
+        traits=traits,
+        astro_full_chart=astro_full_chart
+    )
+    
+    # Append category-specific instructions
+    category_instructions = {
+        "silly": "\n\nTone: Playful, whimsical, lighthearted. Include a fun chemistry pun or cosmic joke.",
+        "deep": "\n\nTone: Profound, introspective, emotionally resonant. Explore the depths of connection.",
+        "astro": "\n\nTone: Mystical, celestial, prophetic. Focus heavily on current astrological transits and their meaning.",
+        "general": ""
+    }
+    
+    full_prompt = identity_prompt + category_instructions.get(category, "")
+    
+    # Optionally append extra user prompt
+    if prompt:
+        full_prompt = f"{full_prompt}\n\nAdditional Context:\n{prompt}"
+    
+    # Try models in order of preference (updated for 2026 API)
+    preferred_models = [
+        "models/gemini-2.5-flash",
+        "models/gemini-2.5-pro",
+        "models/gemini-2.0-flash",
+        "models/gemini-flash-latest",
+        "models/gemini-pro-latest",
+    ]
+    
+    for model_name in preferred_models:
+        try:
+            model = genai.GenerativeModel(model_name)
+            response = model.generate_content(full_prompt)
+            
+            # Extract text from response
+            if hasattr(response, 'text'):
+                return response.text
+            elif hasattr(response, 'parts'):
+                return ''.join(part.text for part in response.parts)
+            else:
+                return str(response)
+        
+        except Exception as e:
+            print(f"⚠ Model {model_name} failed: {e}. Trying next...")
+            continue
+    
+    # If all models fail
+    raise RuntimeError("All Gemini models failed to generate content.")
