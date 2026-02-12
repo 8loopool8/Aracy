@@ -6,9 +6,12 @@ Handles flexible model selection and dynamic prompt injection.
 
 GAMP5 COMPLIANCE: This module receives data through function parameters only.
 No hardcoded personal data. All context is injected at runtime from config.py.
+
+Updated for 2026: Uses the new google-genai SDK (google.genai)
 """
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from config import get_muse_context, get_api_keys
 from logic_protocols.mirror_config import get_identity_prompt
 
@@ -17,6 +20,7 @@ class GeminiWrapper:
     """
     Flexible Gemini AI wrapper with automatic model fallback.
     Tries latest models first, falls back to stable versions if unavailable.
+    Uses the new google-genai SDK (2026).
     """
     
     def __init__(self, api_key=None, preferred_models=None):
@@ -29,12 +33,11 @@ class GeminiWrapper:
         """
         if preferred_models is None:
             preferred_models = [
-                "gemini-2.0-flash-exp",
-                "gemini-2.0-flash-thinking-exp",
-                "gemini-1.5-pro-latest",
-                "gemini-1.5-pro",
-                "gemini-1.5-flash",
-                "gemini-pro",
+                "gemini-2.5-flash",
+                "gemini-2.5-pro",
+                "gemini-2.0-flash",
+                "gemini-flash-latest",
+                "gemini-pro-latest",
             ]
         
         # Load API key from config if not provided
@@ -45,6 +48,7 @@ class GeminiWrapper:
         self.api_key = api_key
         self.preferred_models = preferred_models
         self.available_model = None
+        self.client = genai.Client(api_key=api_key)
         self._init_model()
     
     def _init_model(self):
@@ -52,28 +56,24 @@ class GeminiWrapper:
         Initialize and select the best available Gemini model.
         Tries each preferred model in order until one is available.
         """
-        genai.configure(api_key=self.api_key)
-        
         try:
             # Get list of available models
-            available_models = genai.list_models()
+            available_models = self.client.models.list()
             available_names = {model.name for model in available_models}
             
             # Try each preferred model in order
             for preferred in self.preferred_models:
-                # Check if this model is available (partial match)
-                for available in available_names:
-                    if preferred in available:
-                        self.available_model = preferred
-                        print(f"✧ Gemini Model Selected: {preferred}")
-                        return
+                # Check if this model is available (exact or partial match)
+                if f"models/{preferred}" in available_names or preferred in available_names:
+                    self.available_model = preferred
+                    print(f"✧ Gemini Model Selected: {preferred}")
+                    return
             
             # If no preferred model found, use first available generative model
-            for model in available_models:
-                if 'generateContent' in model.supported_generation_methods:
-                    self.available_model = model.name.split('/')[-1]
-                    print(f"✧ Gemini Model Selected (fallback): {self.available_model}")
-                    return
+            if available_models:
+                self.available_model = available_models[0].name.replace("models/", "")
+                print(f"✧ Gemini Model Selected (fallback): {self.available_model}")
+                return
             
             raise RuntimeError("No compatible Gemini models available.")
         
@@ -121,16 +121,18 @@ class GeminiWrapper:
         if prompt:
             full_prompt = f"{full_prompt}\n\nAdditional Context:\n{prompt}"
         
-        # Generate content
+        # Generate content using new SDK
         try:
-            model = genai.GenerativeModel(self.available_model)
-            response = model.generate_content(full_prompt)
+            response = self.client.models.generate_content(
+                model=self.available_model,
+                contents=full_prompt
+            )
             
             # Extract text from response
             if hasattr(response, 'text'):
                 return response.text
-            elif hasattr(response, 'parts'):
-                return ''.join(part.text for part in response.parts)
+            elif hasattr(response, 'candidates') and response.candidates:
+                return response.candidates[0].content.parts[0].text
             else:
                 return str(response)
         
@@ -165,11 +167,15 @@ Generate the bond name now:
 """
         
         try:
-            model = genai.GenerativeModel(self.available_model)
-            response = model.generate_content(prompt)
+            response = self.client.models.generate_content(
+                model=self.available_model,
+                contents=prompt
+            )
             
             if hasattr(response, 'text'):
                 return response.text.strip().upper()
+            elif hasattr(response, 'candidates') and response.candidates:
+                return response.candidates[0].content.parts[0].text.strip().upper()
             else:
                 return "COSMIC BOND"
         
@@ -205,6 +211,8 @@ def generate_alint(name, profession, traits, astro_full_chart, category="general
     Standalone function to generate an alint with explicit parameters.
     This is the main export function that can be imported directly.
     
+    Uses the new google-genai SDK (2026).
+    
     Args:
         name: The Muse's name
         profession: The Muse's professional identity
@@ -220,8 +228,8 @@ def generate_alint(name, profession, traits, astro_full_chart, category="general
     api_keys = get_api_keys()
     api_key = api_keys['gemini_api_key']
     
-    # Configure Gemini
-    genai.configure(api_key=api_key)
+    # Create client with new SDK
+    client = genai.Client(api_key=api_key)
     
     # Build the identity prompt with injected data
     identity_prompt = get_identity_prompt(
@@ -245,25 +253,27 @@ def generate_alint(name, profession, traits, astro_full_chart, category="general
     if prompt:
         full_prompt = f"{full_prompt}\n\nAdditional Context:\n{prompt}"
     
-    # Try models in order of preference (updated for 2026 API)
+    # Try models in order of preference (stable 2026 models)
     preferred_models = [
-        "models/gemini-2.5-flash",
-        "models/gemini-2.5-pro",
-        "models/gemini-2.0-flash",
-        "models/gemini-flash-latest",
-        "models/gemini-pro-latest",
+        "gemini-2.0-flash",
+        "gemini-2.5-flash",
+        "gemini-2.5-pro",
+        "gemini-flash-latest",
+        "gemini-pro-latest",
     ]
     
     for model_name in preferred_models:
         try:
-            model = genai.GenerativeModel(model_name)
-            response = model.generate_content(full_prompt)
+            response = client.models.generate_content(
+                model=model_name,
+                contents=full_prompt
+            )
             
             # Extract text from response
             if hasattr(response, 'text'):
                 return response.text
-            elif hasattr(response, 'parts'):
-                return ''.join(part.text for part in response.parts)
+            elif hasattr(response, 'candidates') and response.candidates:
+                return response.candidates[0].content.parts[0].text
             else:
                 return str(response)
         

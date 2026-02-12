@@ -18,6 +18,7 @@ load_dotenv(dotenv_path)
 
 # Security & API Configuration
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', '')
+GROQ_API_KEY = os.getenv('GROQ_API_KEY', '')
 SUPABASE_URL = os.getenv('SUPABASE_URL', '')
 SUPABASE_KEY = os.getenv('SUPABASE_KEY', '')
 
@@ -143,10 +144,11 @@ def get_api_keys() -> dict:
     Returns API keys and credentials for external services.
     
     Returns:
-        Dictionary containing API keys for Gemini and Supabase
+        Dictionary containing API keys for Gemini, Groq, and Supabase
     """
     return {
         'gemini_api_key': GEMINI_API_KEY,
+        'groq_api_key': GROQ_API_KEY,
         'supabase_url': SUPABASE_URL,
         'supabase_key': SUPABASE_KEY
     }
