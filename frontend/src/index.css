@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@theme {
+  --color-goth-bg: #0a0a0c;
+  --color-goth-purple: #4b006e;
+  --color-goth-gold: #d4af37;
+}
+@layer base {
+  html, body, #root {
+    background-color: #0a0a0c !important;
+    color: #d4af37 !important;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    /* Deep nebula background with layers of glowing color and animated stars */
+    background-image:
+      radial-gradient(ellipse at 70% 25%, #7026b399 0%, transparent 80%),
+      radial-gradient(ellipse at 30% 70%, #0ff2f977 0%, transparent 80%),
+      radial-gradient(ellipse at 80% 75%, #fd85ff44 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 10%, #ffe1a855 0%, transparent 80%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+/* Twinkling starfield overlay (CSS only) */
+body::before {
+  content: '';
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  background-image:
+    repeating-radial-gradient(circle at 10% 30%, #fff 0 0.5px, transparent 0 30px),
+    repeating-radial-gradient(circle at 80% 80%, #b9e8ff99 0 1px, transparent 0 47px),
+    repeating-radial-gradient(circle at 51% 61%, #ebe0c8 0 1.2px, transparent 0 34px),
+    repeating-radial-gradient(circle at 75% 15%, #c7a6f9 0 1.3px, transparent 0 38px);
+  animation: nebula-stars 11s linear infinite alternate;
+  opacity: 0.72;
+}
+
+@keyframes nebula-stars {
+  from { background-position: 0 0, 0 0, 0 0, 0 0; }
+  to   { background-position: 30px 60px, -40px 67px, 15px -20px, -55px 40px; }
+}

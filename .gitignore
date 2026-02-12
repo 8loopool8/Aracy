@@ -1,0 +1,30 @@
+# ARACY Project Root .gitignore
+# CRITICAL: DO NOT REMOVE! Never track secrets or .env files!
+
+# Environment secrets
+.env
+.env.*
+backend/.env
+
+# Node & frontend noise
+node_modules/
+dist/
+*.log
+.vite/
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build/test artifacts
+coverage/
+*.tmp
+npm-debug.log*
+
+# Supabase local
+.supabase/
+
+# OS-specific
+ehthumbs.db
+Icon?

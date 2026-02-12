@@ -1,0 +1,22 @@
+{
+  "name": "Aracy",
+  "short_name": "Aracy",
+  "description": "Micro-Affection Gamified Ecosystem",
+  "background_color": "#0a0a0c",
+  "theme_color": "#4b006e",
+  "display": "standalone",
+  "start_url": ".",
+  "scope": ".",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

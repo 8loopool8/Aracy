@@ -1,0 +1,27 @@
+# ARACY: THE GOTH-ASTRO-ALCHEMY BUILD RULES
+
+## 1. PROJECT VISION
+- **Purpose:** A PWA for "Alints" (pet names/deep compliments) sent between bonded partners.
+- **Vibe:** Goth-Celestial-Pastel. Dark backgrounds, gold accents, purple glows, elegant typography.
+- **Core Loop:** Sender (The Alchemist) schedules content at night -> Receiver (The Muse) gets it at 06:00 AM.
+
+## 2. TECH STACK & ARCHITECTURE
+- **Backend:** FastAPI (Python). 
+- **Frontend:** React (Vite) + Tailwind CSS + Framer Motion (for animations).
+- **AI:** Gemini Integration (Flexible Model Picker: tries Gemini 2.0 Flash/Pro or latest available).
+- **DB & Auth:** Supabase (Postgres).
+- **Code Style:** Strict separation of "Affection Laws" (AI Prompt Logic) and "Interface" (UI Logic).
+
+## 3. KEY FEATURES TO IMPLEMENT
+- **Bonding Engine:** Code-based linking (ex: 'PETALA-ROZ-2026').
+- **Mirror Profiles:** A dashboard for A to define B's traits and vice versa.
+- **The Batcher:** Support for scheduling 3 types of daily alints (Silly, Deep, Astro).
+- **Gamification:** - Streaks (Star-Flames).
+    - GitHub-style activity grid (Connection Heatmap).
+    - Quiz Mode: Unlockable Badges with Framed animations.
+- **Astro-Logic:** A service that maps daily transits to alints based on birth charts.
+
+## 4. OPEN SOURCE & PORTFOLIO STANDARDS
+- All code must be clean, commented, and follow PEP8 (Python) and ESLint (React).
+- Auto-generate `README.md` and `CONTRIBUTING.md` to explain the "Alchemy" of the app.
+- Ensure 'The Resource Footprint' (memory usage/AI tokens) is logged for performance tracking.
