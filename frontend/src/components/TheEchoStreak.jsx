@@ -190,23 +190,45 @@ export default function TheEchoStreak({ bondId }) {
       </div>
 
       {/* Partner Echoes */}
-      {partnerAlints.length > 0 && (
-          <div className="mb-8 p-6 rounded-2xl bg-goth-purple/10 border border-goth-gold/20">
-              <h3 className="text-lg font-serif italic text-goth-gold mb-4 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5" />
-                  Echoes from the Void
-              </h3>
+      <div className="mb-8 p-6 rounded-2xl bg-goth-purple/10 border border-goth-gold/20">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-serif italic text-goth-gold flex items-center gap-2">
+                <Sparkles className="w-5 h-5" />
+                Echoes from the Void
+            </h3>
+            <motion.button
+              onClick={fetchPartnerEchoes}
+              className="px-3 py-1 rounded-full bg-goth-bg/50 border border-goth-gold/30 text-xs text-goth-gold/70 hover:text-goth-gold hover:border-goth-gold/60"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Refresh the Void
+            </motion.button>
+          </div>
+          
+          {partnerAlints.length > 0 ? (
+            <>
               <p className="text-xs text-goth-gold/60 mb-4">Crystallized alints from your partner</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {partnerAlints.map((alint, idx) => (
                       <div key={idx} className="p-3 bg-black/40 border border-goth-gold/30 rounded-lg">
                           <p className="text-goth-gold font-bold text-sm">{alint.word}</p>
                           <p className="text-goth-gold/60 text-xs italic">{alint.meaning}</p>
+                          {alint.timestamp && (
+                            <p className="text-[10px] text-goth-gold/30 mt-1 text-right">
+                              {new Date(alint.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                            </p>
+                          )}
                       </div>
                   ))}
               </div>
-          </div>
-      )}
+            </>
+          ) : (
+            <p className="text-sm text-goth-gold/40 text-center italic py-4">
+              The void is silent... waiting for your partner's echo.
+            </p>
+          )}
+      </div>
 
       {/* Delivery Time Settings */}
       <div className="mb-8 p-6 rounded-2xl bg-goth-bg/30 border border-goth-gold/20">

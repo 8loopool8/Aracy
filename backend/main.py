@@ -536,20 +536,28 @@ async def crystallize_alints(
 @app.get("/api/ritual/echo")
 async def get_echo_alints(x_bond_id: Optional[str] = Header(None, alias="X-Bond-ID")):
     """
-    Fetch alints crystallized by the partner (associated with the Bond ID).
+    Fetch alints crystallized by the partner.
+    Implements mapping: ALINTAT <-> ALINTATA
     """
     if not x_bond_id:
         return {"alints": []}
 
+    # Partner Mapping Logic
+    partner_id = x_bond_id
+    if x_bond_id == "ALINTAT":
+        partner_id = "ALINTATA"
+    elif x_bond_id == "ALINTATA":
+        partner_id = "ALINTAT"
+    
+    # For demo/self-test, if no specific partner mapping exists, look at self or same code
+    # But priority is the partner_id determined above.
+
     store = load_bond_store()
-    if x_bond_id in store["bonds"]:
-        # Return the crystallized alints for this bond
-        # In a real app, you might want to filter by "partner" vs "me", 
-        # but for now, we share the bond ID so we see what was crystallized in this bond.
-        # We can return the last 10 or so.
-        all_crystallized = store["bonds"][x_bond_id].get("crystallized", [])
-        # Return recent ones, reversed
-        return {"alints": all_crystallized[::-1][:10]}
+    if partner_id in store["bonds"]:
+        # Return the crystallized alints from the PARTNER's vault
+        all_crystallized = store["bonds"][partner_id].get("crystallized", [])
+        # Return recent ones, reversed (newest first)
+        return {"alints": all_crystallized[::-1][:20]}
     
     return {"alints": []}
 
