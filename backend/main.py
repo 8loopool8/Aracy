@@ -17,10 +17,7 @@ app = FastAPI(title="ARACY Backend")
 # CORS Configuration - Allow frontend to connect from both local and production origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "https://aracy-ui.onrender.com",
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

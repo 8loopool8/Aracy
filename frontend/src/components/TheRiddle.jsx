@@ -29,10 +29,18 @@ export default function TheRiddle({ bondId, partnerName }) {
     }
   }, [bondId]);
 
+  const getApiUrl = () => {
+    return window.location.hostname.includes('onrender.com') 
+      ? 'https://aracy.onrender.com' 
+      : 'http://localhost:8000';
+  };
+
   const fetchQuizData = async () => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://aracy.onrender.com';
-      const res = await fetch(`${apiUrl}/api/quiz/generate/${bondId}`);
+      const apiUrl = getApiUrl();
+      const res = await fetch(`${apiUrl}/api/quiz/generate/${bondId}`, {
+        headers: { 'X-Bond-ID': bondId }
+      });
       if (res.ok) {
         const data = await res.json();
         setQuizData(data);
@@ -44,8 +52,10 @@ export default function TheRiddle({ bondId, partnerName }) {
 
   const fetchUnlockedBadges = async () => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://aracy.onrender.com';
-      const res = await fetch(`${apiUrl}/api/quiz/badges/${bondId}`);
+      const apiUrl = getApiUrl();
+      const res = await fetch(`${apiUrl}/api/quiz/badges/${bondId}`, {
+        headers: { 'X-Bond-ID': bondId }
+      });
       if (res.ok) {
         const data = await res.json();
         setUnlockedBadges(data.badges || []);
@@ -62,7 +72,9 @@ export default function TheRiddle({ bondId, partnerName }) {
     setIsAnswered(true);
 
     const question = quizData.questions[currentQuestion];
-    const isCorrect = answerIndex === question.correctAnswer;
+    // Some questions might not have correctAnswer index, handle gracefully
+    const correctAnswer = question.correctAnswer !== undefined ? question.correctAnswer : 0;
+    const isCorrect = answerIndex === correctAnswer;
 
     if (isCorrect) {
       setScore(score + 1);
@@ -110,10 +122,13 @@ export default function TheRiddle({ bondId, partnerName }) {
 
   const unlockBadge = async (badge) => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://aracy.onrender.com';
+      const apiUrl = getApiUrl();
       await fetch(`${apiUrl}/api/quiz/unlock-badge`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+            "Content-Type": "application/json",
+            "X-Bond-ID": bondId
+        },
         body: JSON.stringify({
           bond_id: bondId,
           badge_id: badge.id,
@@ -128,10 +143,13 @@ export default function TheRiddle({ bondId, partnerName }) {
 
   const saveQuizResults = async (finalScore) => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://aracy.onrender.com';
+      const apiUrl = getApiUrl();
       await fetch(`${apiUrl}/api/quiz/save-results`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+            "Content-Type": "application/json",
+            "X-Bond-ID": bondId
+        },
         body: JSON.stringify({
           bond_id: bondId,
           score: finalScore,
@@ -162,6 +180,17 @@ export default function TheRiddle({ bondId, partnerName }) {
         />
       </div>
     );
+  }
+
+  // Handle case where questions might be empty or undefined
+  if (!quizData.questions || quizData.questions.length === 0) {
+      return (
+        <div className="text-center py-20 px-6">
+            <p className="text-xl font-serif italic text-goth-gold/70">
+                ✨ The stars are silent... No riddles today. ✨
+            </p>
+        </div>
+      );
   }
 
   if (quizComplete) {
@@ -319,7 +348,7 @@ export default function TheRiddle({ bondId, partnerName }) {
 
           {/* Answers */}
           <div className="space-y-3">
-            {question.answers.map((answer, index) => {
+            {question.answers && question.answers.map((answer, index) => {
               const isCorrect = index === question.correctAnswer;
               const isSelected = selectedAnswer === index;
               const showResult = isAnswered;

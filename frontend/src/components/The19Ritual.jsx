@@ -27,9 +27,15 @@ export default function The19Ritual({ endearments, onReflect, bondId }) {
     }
   }, [bondId]);
 
+  const getApiUrl = () => {
+    return window.location.hostname.includes('onrender.com') 
+      ? 'https://aracy.onrender.com' 
+      : 'http://localhost:8000';
+  };
+
   const fetchReflectedState = async () => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const apiUrl = getApiUrl();
       const res = await fetch(`${apiUrl}/api/ritual/reflected/${bondId}`);
       if (res.ok) {
         const data = await res.json();
@@ -59,10 +65,13 @@ export default function The19Ritual({ endearments, onReflect, bondId }) {
     }
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const apiUrl = getApiUrl();
       await fetch(`${apiUrl}/api/ritual/reflect`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+            "Content-Type": "application/json",
+            "X-Bond-ID": bondId 
+        },
         body: JSON.stringify({
           bond_id: bondId,
           index,
@@ -114,11 +123,12 @@ export default function The19Ritual({ endearments, onReflect, bondId }) {
       });
       
       // Call API to crystallize alints
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const apiUrl = getApiUrl();
       const response = await fetch(`${apiUrl}/api/vault/crystallize`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-Bond-ID': bondId
         },
         body: JSON.stringify({
           alints: selectedAlints

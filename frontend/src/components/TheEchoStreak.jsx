@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Flame, Calendar, Clock, Sunrise } from "lucide-react";
+import { Flame, Calendar, Clock, Sunrise, Sparkles } from "lucide-react";
 
 /**
  * THE ECHO & STREAK - Delivery Scheduling & Streak Tracking
@@ -11,6 +11,7 @@ import { Flame, Calendar, Clock, Sunrise } from "lucide-react";
  * - Show last delivery timestamp
  * - Connection heatmap (GitHub-style activity grid)
  * - Streak milestones with badges
+ * - Display partner's crystallized alints
  */
 export default function TheEchoStreak({ bondId }) {
   const [streakData, setStreakData] = useState({
@@ -19,18 +20,26 @@ export default function TheEchoStreak({ bondId }) {
     deliveryTime: "06:00",
     heatmapData: [],
   });
+  const [partnerAlints, setPartnerAlints] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [tempTime, setTempTime] = useState("06:00");
 
   useEffect(() => {
     if (bondId) {
       fetchStreakData();
+      fetchPartnerEchoes();
     }
   }, [bondId]);
 
+  const getApiUrl = () => {
+    return window.location.hostname.includes('onrender.com') 
+      ? 'https://aracy.onrender.com' 
+      : 'http://localhost:8000';
+  };
+
   const fetchStreakData = async () => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://aracy.onrender.com';
+      const apiUrl = getApiUrl();
       const res = await fetch(`${apiUrl}/api/streak/${bondId}`);
       if (res.ok) {
         const data = await res.json();
@@ -42,9 +51,26 @@ export default function TheEchoStreak({ bondId }) {
     }
   };
 
+  const fetchPartnerEchoes = async () => {
+    try {
+      const apiUrl = getApiUrl();
+      const res = await fetch(`${apiUrl}/api/ritual/echo`, {
+        headers: {
+            'X-Bond-ID': bondId
+        }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setPartnerAlints(data.alints || []);
+      }
+    } catch (err) {
+      console.error("Failed to fetch partner echoes:", err);
+    }
+  };
+
   const updateDeliveryTime = async () => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://aracy.onrender.com';
+      const apiUrl = getApiUrl();
       await fetch(`${apiUrl}/api/streak/delivery-time`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -162,6 +188,25 @@ export default function TheEchoStreak({ bondId }) {
           </p>
         </div>
       </div>
+
+      {/* Partner Echoes */}
+      {partnerAlints.length > 0 && (
+          <div className="mb-8 p-6 rounded-2xl bg-goth-purple/10 border border-goth-gold/20">
+              <h3 className="text-lg font-serif italic text-goth-gold mb-4 flex items-center gap-2">
+                  <Sparkles className="w-5 h-5" />
+                  Echoes from the Void
+              </h3>
+              <p className="text-xs text-goth-gold/60 mb-4">Crystallized alints from your partner</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {partnerAlints.map((alint, idx) => (
+                      <div key={idx} className="p-3 bg-black/40 border border-goth-gold/30 rounded-lg">
+                          <p className="text-goth-gold font-bold text-sm">{alint.word}</p>
+                          <p className="text-goth-gold/60 text-xs italic">{alint.meaning}</p>
+                      </div>
+                  ))}
+              </div>
+          </div>
+      )}
 
       {/* Delivery Time Settings */}
       <div className="mb-8 p-6 rounded-2xl bg-goth-bg/30 border border-goth-gold/20">

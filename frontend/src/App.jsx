@@ -1,23 +1,43 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import TheLab from './components/TheLab';
 import The19Ritual from './components/The19Ritual';
 import TheEchoStreak from './components/TheEchoStreak';
 import TheRiddle from './components/TheRiddle';
 import Stardust from './components/Stardust';
+import BondingScreen from './components/BondingScreen';
 
 function App() {
   const [activeTab, setActiveTab] = useState('lab');
   const [isGenerating, setIsGenerating] = useState(false);
   const [alints, setAlints] = useState(null);
-  const [bondId] = useState('demo-bond-id');
+  const [bondId, setBondId] = useState(null);
+
+  useEffect(() => {
+    // Check for existing bond
+    const storedBond = localStorage.getItem('aracy_bond_id');
+    if (storedBond) {
+      setBondId(storedBond);
+    }
+  }, []);
+
+  const handleBondLink = (newBondId) => {
+    localStorage.setItem('aracy_bond_id', newBondId);
+    setBondId(newBondId);
+  };
+
+  const getApiUrl = () => {
+    return window.location.hostname.includes('onrender.com') 
+      ? 'https://aracy.onrender.com' 
+      : 'http://localhost:8000';
+  };
 
   const handleGenerate = async (labParams) => {
+    if (!bondId) return;
+
     setIsGenerating(true);
     try {
-      const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:8000'
-        : 'https://aracy.onrender.com';
+      const API_URL = getApiUrl();
       
       console.log('🔮 Initiating Transmutation...', {
         endpoint: `${API_URL}/api/lab/generate`,
@@ -28,7 +48,8 @@ function App() {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Accept': 'application/json',
+          'X-Bond-ID': bondId
         },
         body: JSON.stringify({
           style: labParams.style,
@@ -73,7 +94,7 @@ function App() {
       console.error('💥 Transmutation failed:', err);
       
       if (err.message.includes('Failed to fetch')) {
-        alert(`🔥 The alchemical connection has been severed...\n\nCannot reach the backend at:\n${API_URL}\n\nEnsure the backend is running and CORS is configured.\n\nError: ${err.message}`);
+        alert(`🔥 The alchemical connection has been severed...\n\nCannot reach the backend at:\n${getApiUrl()}\n\nEnsure the backend is running and CORS is configured.\n\nError: ${err.message}`);
       } else {
         alert(`⚗️ The transmutation ritual encountered an anomaly...\n\nError: ${err.message}\n\nConsult the console for deeper insights.`);
       }
@@ -183,99 +204,110 @@ function App() {
             </p>
           </div>
         </motion.header>
+        
+        {/* Bond Gate - Show until bond is linked */}
+        <AnimatePresence>
+          {!bondId && (
+            <BondingScreen onLink={handleBondLink} />
+          )}
+        </AnimatePresence>
 
         {/* Navigation Tabs - MORE PROMINENT AND CENTERED */}
-        <nav className="flex justify-center gap-3 mb-8 w-full max-w-md">
-          {[
-            { id: 'echo', label: 'ECHO', icon: '🔥' },
-            { id: 'lab', label: 'LAB', icon: '⚗️' },
-            { id: 'ritual', label: 'RITUAL', icon: '💫' },
-            { id: 'riddle', label: 'RIDDLE', icon: '🧠' },
-          ].map((tab) => (
-            <motion.button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`relative px-5 py-3 rounded-lg font-serif text-sm tracking-wider transition-all border-2 ${
-                activeTab === tab.id
-                  ? 'bg-gradient-to-br from-goth-gold/30 to-goth-purple/30 border-goth-gold text-goth-gold shadow-[0_0_20px_#d4af37]'
-                  : 'bg-black/30 border-goth-gold/30 text-goth-gold/60 hover:border-goth-gold/60'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="mr-1 text-base">{tab.icon}</span>
-              {tab.label}
-              {activeTab === tab.id && (
-                <motion.div
-                  className="absolute -bottom-1 left-1/2 w-1/2 h-0.5 bg-goth-gold"
-                  layoutId="activeTab"
-                  style={{ translateX: '-50%' }}
-                />
-              )}
-            </motion.button>
-          ))}
-        </nav>
+        {bondId && (
+          <nav className="flex justify-center gap-3 mb-8 w-full max-w-md">
+            {[
+              { id: 'echo', label: 'ECHO', icon: '🔥' },
+              { id: 'lab', label: 'LAB', icon: '⚗️' },
+              { id: 'ritual', label: 'RITUAL', icon: '💫' },
+              { id: 'riddle', label: 'RIDDLE', icon: '🧠' },
+            ].map((tab) => (
+              <motion.button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`relative px-5 py-3 rounded-lg font-serif text-sm tracking-wider transition-all border-2 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-br from-goth-gold/30 to-goth-purple/30 border-goth-gold text-goth-gold shadow-[0_0_20px_#d4af37]'
+                    : 'bg-black/30 border-goth-gold/30 text-goth-gold/60 hover:border-goth-gold/60'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="mr-1 text-base">{tab.icon}</span>
+                {tab.label}
+                {activeTab === tab.id && (
+                  <motion.div
+                    className="absolute -bottom-1 left-1/2 w-1/2 h-0.5 bg-goth-gold"
+                    layoutId="activeTab"
+                    style={{ translateX: '-50%' }}
+                  />
+                )}
+              </motion.button>
+            ))}
+          </nav>
+        )}
 
         {/* Content Area with Cross-fade Animation */}
-        <div className="w-full max-w-6xl">
-          <AnimatePresence mode="wait">
-            {activeTab === 'echo' && (
-              <motion.div
-                key="echo"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.4 }}
-              >
-                <TheEchoStreak bondId={bondId} />
-              </motion.div>
-            )}
+        {bondId && (
+          <div className="w-full max-w-6xl">
+            <AnimatePresence mode="wait">
+              {activeTab === 'echo' && (
+                <motion.div
+                  key="echo"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <TheEchoStreak bondId={bondId} />
+                </motion.div>
+              )}
 
-            {activeTab === 'lab' && (
-              <motion.div
-                key="lab"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.4 }}
-              >
-                <TheLab onGenerate={handleGenerate} isGenerating={isGenerating} />
-              </motion.div>
-            )}
+              {activeTab === 'lab' && (
+                <motion.div
+                  key="lab"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <TheLab onGenerate={handleGenerate} isGenerating={isGenerating} />
+                </motion.div>
+              )}
 
-            {activeTab === 'ritual' && (
-              <motion.div
-                key="ritual"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.4 }}
-              >
-                {alints ? (
-                  <The19Ritual endearments={alints} bondId={bondId} />
-                ) : (
-                  <div className="text-center py-20 px-6 rounded-2xl bg-black/30 border-2 border-goth-gold/30">
-                    <p className="text-xl font-serif italic text-goth-gold/70">
-                      ✨ Generate alints in The Lab first ✨
-                    </p>
-                  </div>
-                )}
-              </motion.div>
-            )}
+              {activeTab === 'ritual' && (
+                <motion.div
+                  key="ritual"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  {alints ? (
+                    <The19Ritual endearments={alints} bondId={bondId} />
+                  ) : (
+                    <div className="text-center py-20 px-6 rounded-2xl bg-black/30 border-2 border-goth-gold/30">
+                      <p className="text-xl font-serif italic text-goth-gold/70">
+                        ✨ Generate alints in The Lab first ✨
+                      </p>
+                    </div>
+                  )}
+                </motion.div>
+              )}
 
-            {activeTab === 'riddle' && (
-              <motion.div
-                key="riddle"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.4 }}
-              >
-                <TheRiddle bondId={bondId} partnerName="Ale" />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+              {activeTab === 'riddle' && (
+                <motion.div
+                  key="riddle"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <TheRiddle bondId={bondId} partnerName="Ale" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        )}
       </div>
     </div>
   );
