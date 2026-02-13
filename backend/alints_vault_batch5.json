@@ -1,0 +1,826 @@
+{
+  "alints": [
+    {
+      "word": "Tenebris Amator",
+      "meaning": "The lover of darkness who finds beauty where others see only shadow",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Helgrindr",
+      "meaning": "The death gate through which all must pass but few return unchanged",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Kālarātri",
+      "meaning": "The night of time that reveals the eternal nature of our bond",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Suflet Umbrit",
+      "meaning": "The shadowed soul whose depths contain unexpected treasures",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mortis Susurrus",
+      "meaning": "The whisper of death that reminds us to cherish each moment",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Draugavinr",
+      "meaning": "The ghost-friend who walks beside you through the darkest nights",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Śmaśānadhyāna",
+      "meaning": "The cremation ground meditation that transforms fear into transcendence",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Vălul Nopții",
+      "meaning": "The veil of night that conceals and reveals in equal measure",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Sepulcralis Lux",
+      "meaning": "The sepulchral light that emanates from ancient tombs of memory",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Haugaeld",
+      "meaning": "The mound-fire that burns over ancient burial sites on moonless nights",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Pretātman",
+      "meaning": "The ghost-self that remains when all else has been stripped away",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Umbre Eterne",
+      "meaning": "The eternal shadows that dance between worlds at twilight",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mortiferum Desiderium",
+      "meaning": "The deadly longing that consumes everything in its path",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Draugadraumr",
+      "meaning": "The ghost-dream that visits when the veil between worlds thins",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Kālacakra",
+      "meaning": "The wheel of time that grinds all things to dust except our love",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mormânt de Stele",
+      "meaning": "The tomb of stars where cosmic light goes to die and be reborn",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Umbraculum Animae",
+      "meaning": "The soul's shadow that protects its most vulnerable aspects",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Heljarskinn",
+      "meaning": "The death-shine that illuminates our true nature in darkness",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Śmaśānavairāgya",
+      "meaning": "The detachment achieved in the cremation ground of ego",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Întuneric Sacru",
+      "meaning": "The sacred darkness where transformation occurs beyond sight",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Wigglefloof",
+      "meaning": "The happy dance your heart does when I enter the room",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Snorkelweasel",
+      "meaning": "One who dives deep into my heart and explores its hidden treasures",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Fíflalæti",
+      "meaning": "The foolish behavior that somehow makes perfect sense when we're together",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hāsyapriya",
+      "meaning": "The lover of laughter who finds joy in the smallest things",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Zâmbici",
+      "meaning": "The tiny smiles that multiply across my face when I think of you",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Muffinsnuggles",
+      "meaning": "The warm, cozy feeling of being wrapped in your affection",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Ridiculosus Adorabilis",
+      "meaning": "Ridiculously adorable in a way that defies logical explanation",
+      "language": "Latin",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Glettiskratti",
+      "meaning": "The mischievous imp that makes you do adorably ridiculous things",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hāsyarasāyana",
+      "meaning": "The elixir of laughter that cures all ailments of the spirit",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Ghidușie Dulce",
+      "meaning": "The sweet mischief that sparkles in your eyes before you tease me",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Bubblesnort",
+      "meaning": "The sound of joy escaping through your nose when you try not to laugh",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Jocositas Maxima",
+      "meaning": "The supreme playfulness that keeps our love fresh through the years",
+      "language": "Latin",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Kátrbragð",
+      "meaning": "The cheerful expression that transforms your entire face when you're happy",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hāsyamudita",
+      "meaning": "The joy of shared laughter that creates bonds stronger than any serious conversation",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Zburdalnic",
+      "meaning": "Delightfully chaotic in a way that brings unexpected joy to everyday moments",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Gigglewobble",
+      "meaning": "The way your whole body shakes when you laugh uncontrollably",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hilaritas Contagiosa",
+      "meaning": "The contagious cheerfulness that spreads to everyone around you",
+      "language": "Latin",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Fífldjarfr",
+      "meaning": "Foolishly brave in the most endearing way possible",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hāsyavikāra",
+      "meaning": "The transformation that occurs when laughter takes over your entire being",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Zâmbăreț Nebun",
+      "meaning": "Crazily smiley in a way that makes everyone around you happier",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Aether Vinculum",
+      "meaning": "The ethereal bond that connects our souls across any distance",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Jalapriya",
+      "meaning": "Beloved of water, whose adaptability and depth mirror the ocean",
+      "language": "Sanskrit",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Eldhjarta",
+      "meaning": "The fire-heart whose warmth sustains me through the coldest times",
+      "language": "Old Norse",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Vânt Șoptitor",
+      "meaning": "The whispering wind that carries secrets between our souls",
+      "language": "Romanian",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Terra Firma",
+      "meaning": "The solid ground of our commitment that withstands any storm",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Vāyuputra",
+      "meaning": "Child of the wind, whose spirit cannot be contained or constrained",
+      "language": "Sanskrit",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Vatnshjarta",
+      "meaning": "The water-heart that flows around obstacles with graceful persistence",
+      "language": "Old Norse",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Cristal de Suflet",
+      "meaning": "The soul crystal that reflects light in unexpected and beautiful patterns",
+      "language": "Romanian",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Fulgur Amoris",
+      "meaning": "The lightning of love that illuminates our darkest moments",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Pṛthvīsuta",
+      "meaning": "Child of earth, whose strength and stability nurture all around them",
+      "language": "Sanskrit",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Aurvindr",
+      "meaning": "The gentle breeze that brings clarity to my thoughts and visions",
+      "language": "Old Norse",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Apă Vie",
+      "meaning": "The living water that brings renewal and healing to our relationship",
+      "language": "Romanian",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Glacies Aeternum",
+      "meaning": "The eternal ice that preserves our most precious memories unchanged",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Agniputra",
+      "meaning": "Child of fire, whose passion transforms everything it touches",
+      "language": "Sanskrit",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Jarðarsonr",
+      "meaning": "Earth-son whose connection to the land grounds our love in reality",
+      "language": "Old Norse",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Foc Veșnic",
+      "meaning": "The eternal flame that burns between us, impossible to extinguish",
+      "language": "Romanian",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Aqua Vitalis",
+      "meaning": "The water of life that refreshes our connection with each encounter",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Vāyuvega",
+      "meaning": "Swift as wind, your spirit moves with freedom and grace",
+      "language": "Sanskrit",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Eldskál",
+      "meaning": "The fire-bowl that warms our hearts on the coldest nights",
+      "language": "Old Norse",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Pământ Sfințit",
+      "meaning": "The consecrated earth where our love takes root and flourishes",
+      "language": "Romanian",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Progenitorum Sapientia",
+      "meaning": "The wisdom of forebears that guides your choices in difficult moments",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Pitṛpakṣa",
+      "meaning": "The fortnight dedicated to honoring ancestors who blessed our union",
+      "language": "Sanskrit",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Ættbogi",
+      "meaning": "The family bow that arches through time connecting generations",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Moștenire Spirituală",
+      "meaning": "The spiritual inheritance that shapes your unique perspective",
+      "language": "Romanian",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Avorum Memoria",
+      "meaning": "The memory of grandparents that lives on in your gestures and expressions",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Pitṛtarpaṇa",
+      "meaning": "The offering to ancestors that maintains the flow of blessings",
+      "language": "Sanskrit",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Ættmót",
+      "meaning": "The family meeting across time that occurs in dreams and intuitions",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Rădăcini Adânci",
+      "meaning": "The deep roots that connect you to the ancestral soil of your origins",
+      "language": "Romanian",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Antecessorum Donum",
+      "meaning": "The gift of predecessors that manifests in your natural talents",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Pitṛloka",
+      "meaning": "The ancestral realm where wisdom is preserved for future generations",
+      "language": "Sanskrit",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Ættarandi",
+      "meaning": "The family spirit that breathes through your unique expressions",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Neam Sfânt",
+      "meaning": "The sacred lineage that flows through your veins and shapes your destiny",
+      "language": "Romanian",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Maiorum Vestigia",
+      "meaning": "The footsteps of ancestors that guide your path through life",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Pitṛsevā",
+      "meaning": "The service to ancestors that maintains the flow of blessings",
+      "language": "Sanskrit",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Forfeðratrú",
+      "meaning": "The faith of forefathers that provides strength in difficult times",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Străbunii Veghează",
+      "meaning": "The ancestors watch over us, guiding our steps through life",
+      "language": "Romanian",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Avita Virtus",
+      "meaning": "The ancestral virtue that flows through your actions without effort",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Pitṛrṇa",
+      "meaning": "The debt to ancestors that we repay through honoring their memory",
+      "language": "Sanskrit",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Ættfylgja",
+      "meaning": "The family guardian spirit that watches over our love",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Sânge Străvechi",
+      "meaning": "The ancient blood that carries wisdom from generations past",
+      "language": "Romanian",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Bioluminaria Cordis",
+      "meaning": "The heart's bioluminescence that glows brightest in your presence",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Tanmātraśāstra",
+      "meaning": "The science of subtle elements that compose our unique connection",
+      "language": "Sanskrit",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Stjörnukort",
+      "meaning": "The star map that charts the celestial alignment of our meeting",
+      "language": "Old Norse",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Rezonanță Morfică",
+      "meaning": "The morphic resonance that allows us to sense each other's thoughts across distance",
+      "language": "Romanian",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Particula Primordialis",
+      "meaning": "The primordial particle from which our love expanded into existence",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Jyotiṣaśāstra",
+      "meaning": "The astronomical science that predicted our paths would cross",
+      "language": "Sanskrit",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Heilaefnafræði",
+      "meaning": "The brain chemistry that creates euphoria when I think of you",
+      "language": "Old Norse",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Sincronicitate Cuantică",
+      "meaning": "The quantum synchronicity that brings meaningful coincidences to our relationship",
+      "language": "Romanian",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Fusio Nuclearis",
+      "meaning": "The nuclear fusion of our spirits that generates limitless energy",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Spandakaṇikā",
+      "meaning": "The vibration particle that transmits our emotional states between us",
+      "language": "Sanskrit",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Stjörnuþoka Hjarta",
+      "meaning": "The heart nebula where new stars of our dreams are constantly being born",
+      "language": "Old Norse",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Câmp Morfic",
+      "meaning": "The morphic field that preserves the patterns of our connection across time",
+      "language": "Romanian",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Neuroplasticitas Amoris",
+      "meaning": "The love-induced brain rewiring that permanently alters my neural pathways",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Prakāśavijñāna",
+      "meaning": "The science of illumination that explains how your presence brightens my existence",
+      "language": "Sanskrit",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Efnafræðiást",
+      "meaning": "The chemistry of love that creates compounds of perfect harmony",
+      "language": "Old Norse",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Gravitație Cuantică",
+      "meaning": "The quantum gravity that keeps me orbiting in your perfect sphere",
+      "language": "Romanian",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Quantum Entanglement",
+      "meaning": "The phenomenon where our particles remain connected regardless of distance",
+      "language": "Latin/English",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Spandaśāstra",
+      "meaning": "The science of vibration that explains how our souls recognize each other",
+      "language": "Sanskrit",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Stjörnuvísindi",
+      "meaning": "The star science that maps the cosmic forces bringing us together",
+      "language": "Old Norse",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Undă Sincronică",
+      "meaning": "The synchronous wave that aligns our biorhythms when we're together",
+      "language": "Romanian",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Umbraculum Mortis",
+      "meaning": "The shadow of death that makes our fleeting moments together more precious",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Draugaseiðr",
+      "meaning": "The ghost-magic that binds our souls beyond the veil of mortality",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Śmaśāna",
+      "meaning": "The cremation ground where our former selves are transformed by love's fire",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Nemuritoare",
+      "meaning": "The undying essence of our connection that transcends physical death",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Sepulcralis",
+      "meaning": "The tomb-like silence where our deepest truths are finally spoken",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Haugbui",
+      "meaning": "The mound-dweller who guards the treasures of our shared memories",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Kālarātri",
+      "meaning": "The dark night of time that reveals the eternal nature of our bond",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Criptă",
+      "meaning": "The crypt where I store the sacred relics of our most intimate moments",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mortiferum",
+      "meaning": "The deadly beauty of a love so intense it consumes everything in its path",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Helvegr",
+      "meaning": "The road to the underworld that I would walk to find you again",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Pretasthāna",
+      "meaning": "The realm of ghosts where our love continues beyond physical form",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Întuneric Sfânt",
+      "meaning": "The holy darkness where our souls are most authentically revealed",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Ossarium",
+      "meaning": "The collection of memories stripped to their essential truth",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Nástrǫnd",
+      "meaning": "The shore of corpses where we pledged to find each other in every life",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Yamadūta",
+      "meaning": "The messenger of death who cannot separate what love has joined",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Vrăjitoare",
+      "meaning": "The witch whose dark magic has enchanted my heart forever",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mortificus",
+      "meaning": "The death-maker who slays my former self to birth something greater",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Draugheimr",
+      "meaning": "The ghost-world where our love continues when this life ends",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Śūnyatā",
+      "meaning": "The emptiness that contains all possibilities of our eternal connection",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Morminte",
+      "meaning": "The graves where we buried our fears to make room for love's growth",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Ridiculosus Maximus",
+      "meaning": "The supreme silliness that makes even my worst days brighter",
+      "language": "Latin",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Fíflalæti",
+      "meaning": "The foolish behavior that somehow makes perfect sense when we're together",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hāsyarasa",
+      "meaning": "The flavor of humor that seasons our relationship perfectly",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Zâmbărici",
+      "meaning": "The tiny smiles that multiply across my face when I think of you",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Cachinnus",
+      "meaning": "The loud, uncontrollable laughter you always manage to draw from me",
+      "language": "Latin",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Glotthalamr",
+      "meaning": "The silly noise our hearts make when they try to speak to each other",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Vikṛta",
+      "meaning": "The delightful distortion of reality that occurs when we play together",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Ghidușie",
+      "meaning": "The playful mischief that sparkles in your eyes before you tease me",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Jocularis",
+      "meaning": "The jester of my heart who turns sorrows into celebrations",
+      "language": "Latin",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Kátrbragð",
+      "meaning": "The cheerful expression that transforms your entire face when you're happy",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Unmatta",
+      "meaning": "The divine madness that makes perfect sense only to us",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Poznă",
+      "meaning": "The playful prank that reminds me not to take life too seriously",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hilaritas",
+      "meaning": "The cheerfulness that radiates from you and infects everyone nearby",
+      "language": "Latin",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Glettinn",
+      "meaning": "Playfully mischievous in a way that makes my heart skip with joy",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hāsya",
+      "meaning": "The laughter that bubbles up from my soul whenever we're together",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hazliu",
+      "meaning": "Amusingly funny in a way that brightens even my darkest moods",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Jocositas",
+      "meaning": "The playfulness that keeps our love fresh through the years",
+      "language": "Latin",
+      "vibe": "Silly"
+    }
+  ]
+}

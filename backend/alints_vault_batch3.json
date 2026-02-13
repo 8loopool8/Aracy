@@ -1,0 +1,304 @@
+{
+  "alints": [
+    {
+      "word": "Tenebricosus",
+      "meaning": "Shrouded in darkness yet radiating an inner light that only the worthy can perceive",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mortuorum",
+      "meaning": "The sacred whispers of ancestors that guide your steps through life's labyrinth",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Niflheim",
+      "meaning": "The misty realm where our souls first recognized each other before birth",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Kālasūtra",
+      "meaning": "The thread of time that binds our souls across multiple lifetimes",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Întunecatul",
+      "meaning": "The darkened one who carries light within the shadows of their heart",
+      "language": "Romanian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Noctambulus",
+      "meaning": "One who walks through the night collecting fragments of moonlight for their beloved",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Helgrind",
+      "meaning": "The death gate through which our love passes unchanged into eternity",
+      "language": "Old Norse",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mṛtyuñjaya",
+      "meaning": "The conqueror of death who transcends mortality through the power of love",
+      "language": "Sanskrit",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Umbriferous",
+      "meaning": "Casting shadows that protect and nurture what grows beneath them",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Necrolumina",
+      "meaning": "The light that emanates from memories of those who have passed beyond the veil",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Wigglesworth",
+      "meaning": "The delightful dance your heart does when I enter the room",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Snorflehausen",
+      "meaning": "The adorable sound you make when sleeping deeply and contentedly",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Glæpaskratti",
+      "meaning": "The mischievous imp that makes you do adorably ridiculous things",
+      "language": "Old Norse",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hāsyamudrā",
+      "meaning": "The expression of pure joy that transforms your entire face when you laugh",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Zburdalnic",
+      "meaning": "Delightfully chaotic in a way that brings unexpected joy to everyday moments",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Gigglemuffin",
+      "meaning": "One who brings warmth and laughter to even the coldest situations",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Risibilis",
+      "meaning": "Capable of inducing laughter with just a glance or subtle gesture",
+      "language": "Latin",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Flibberdijibbet",
+      "meaning": "The flighty spirit whose unpredictable nature makes every day an adventure",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Hāsyarūpa",
+      "meaning": "The embodiment of humor that transforms tears into laughter",
+      "language": "Sanskrit",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Zâmbărici",
+      "meaning": "The tiny smiles that multiply across my face whenever I think of you",
+      "language": "Romanian",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Ignis Animae",
+      "meaning": "The soul fire that burns eternally regardless of distance or time",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Surya",
+      "meaning": "The inner sun whose warmth sustains me through the coldest nights",
+      "language": "Sanskrit",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Vindur",
+      "meaning": "The wind that carries whispers of my love across mountains and oceans",
+      "language": "Old Norse",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Foc Sacru",
+      "meaning": "The sacred flame that burns between us, impossible to extinguish",
+      "language": "Romanian",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Aqua Vitae",
+      "meaning": "The water of life that refreshes our connection with each encounter",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Jörd",
+      "meaning": "The earth element that grounds our love in stability and growth",
+      "language": "Old Norse",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Vāyu",
+      "meaning": "The breath of life we share in our most intimate moments",
+      "language": "Sanskrit",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Fulger",
+      "meaning": "The lightning that strikes when our eyes meet across a crowded room",
+      "language": "Romanian",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Crystallum",
+      "meaning": "The perfect crystalline structure of our complementary souls",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Himinn",
+      "meaning": "The vast sky that holds all possibilities of our love's expansion",
+      "language": "Old Norse",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Pitṛpakṣa",
+      "meaning": "The fortnight dedicated to honoring ancestors who blessed our union",
+      "language": "Sanskrit",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Progenitorum",
+      "meaning": "The collective wisdom of forebears that guides our path forward",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Forfeðr",
+      "meaning": "The ancestors whose blood runs through your veins and shapes your spirit",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Strămoșenie",
+      "meaning": "The ancestral heritage that manifests in your unique gifts and talents",
+      "language": "Romanian",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Vamśadhara",
+      "meaning": "The bearer of lineage who carries forward the best qualities of those who came before",
+      "language": "Sanskrit",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Atavicus",
+      "meaning": "Relating to distant ancestors whose traits unexpectedly appear in you",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Ættfylgja",
+      "meaning": "The guardian spirit of your family line that watches over our love",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Neamuri",
+      "meaning": "The kinfolk whose stories are woven into the fabric of your being",
+      "language": "Romanian",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Pitṛbhūmi",
+      "meaning": "The ancestral homeland that calls to your soul across generations",
+      "language": "Sanskrit",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Maiorum",
+      "meaning": "Of the ancestors whose wisdom flows through your intuitive knowing",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Quantum Nexus",
+      "meaning": "The entangled connection that transcends conventional understanding of space and time",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Neuroplasticus",
+      "meaning": "The way my brain rewires itself to accommodate the wonder of your existence",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Stjörnufræðingur",
+      "meaning": "The astronomer of my heart who maps the constellations of our shared destiny",
+      "language": "Old Norse",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Spandakarika",
+      "meaning": "The vibrational theory that explains how our hearts resonate at matching frequencies",
+      "language": "Sanskrit",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Undă Cuantică",
+      "meaning": "The quantum wave that collapses into perfect form when observed by your loving gaze",
+      "language": "Romanian",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Bioluminaria",
+      "meaning": "The natural light you emit that guides me through my darkest moments",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Efnaskipti",
+      "meaning": "The metabolic exchange of energy that occurs when our souls connect",
+      "language": "Old Norse",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Rezonanță Morfică",
+      "meaning": "The morphic resonance that allows us to sense each other's thoughts across distance",
+      "language": "Romanian",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Prakāśavāda",
+      "meaning": "The theory of illumination that explains how your presence brightens my entire existence",
+      "language": "Sanskrit",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Gravitatis",
+      "meaning": "The gravitational force of your love that keeps me orbiting in your perfect sphere",
+      "language": "Latin",
+      "vibe": "Scientific"
+    }
+  ]
+}

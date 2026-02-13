@@ -1,0 +1,604 @@
+{
+  "alints": [
+    {
+      "word": "Umbraculum",
+      "meaning": "A sacred shadow that protects the soul from the harsh light of reality",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Noctiluca",
+      "meaning": "One who glows in darkness, illuminating the path for others",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Tenebrae",
+      "meaning": "The comforting darkness that embraces lovers in their most vulnerable moments",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mørketid",
+      "meaning": "The dark time; one who brings light during the longest nights of the soul",
+      "language": "Norwegian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Abyssus",
+      "meaning": "The beautiful depth within you that I forever long to explore",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Penumbra",
+      "meaning": "The space between light and shadow where our souls meet in twilight",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Ravenhart",
+      "meaning": "One whose heart bears wisdom as dark and profound as a raven's wing",
+      "language": "English",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Nocturne",
+      "meaning": "A melody of darkness that sings only for those who understand its beauty",
+      "language": "French",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Thanatopsis",
+      "meaning": "One who finds beauty in contemplating the inevitable embrace of mortality",
+      "language": "Greek",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Obsidian",
+      "meaning": "Dark, reflective soul with hidden depths and protective qualities",
+      "language": "English",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Beansprout",
+      "meaning": "My tiny growing love that reaches toward the sun",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Schnookums",
+      "meaning": "The one whose presence makes my heart do a silly little dance",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Mochi",
+      "meaning": "Soft, sweet, and perfectly squeezable in every way",
+      "language": "Japanese",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Doodlebug",
+      "meaning": "One who leaves creative marks on my heart with every interaction",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Fluffernutter",
+      "meaning": "The perfect blend of softness and sweetness that sticks with me all day",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Snorkelweasel",
+      "meaning": "One who dives deep into my heart and explores its hidden treasures",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Kerfuffle",
+      "meaning": "The delightful chaos you bring to my otherwise orderly life",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Malarkey",
+      "meaning": "The nonsensical joy you bring to my serious world",
+      "language": "Irish",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Snickerdoodle",
+      "meaning": "Sweet, warm, and sprinkled with just the right amount of spice",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Discombobulate",
+      "meaning": "The one who delightfully confuses my senses and scrambles my thoughts",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Aether",
+      "meaning": "The quintessential element that connects our souls across any distance",
+      "language": "Greek",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Ignis",
+      "meaning": "The eternal flame that burns within you, warming my coldest nights",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Aquilo",
+      "meaning": "The north wind that carries your whispers to me across mountains and seas",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Terra",
+      "meaning": "My grounding force, the earth that centers me when I am adrift",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Fulgur",
+      "meaning": "The lightning that strikes my heart whenever you enter a room",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Mistral",
+      "meaning": "The cold, clear wind that brings clarity to my thoughts and visions",
+      "language": "Occitan",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Obsidian",
+      "meaning": "Formed in fire, strong yet beautiful, protective of what lies within",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Cascade",
+      "meaning": "The flowing water of your love that cleanses and renews my spirit",
+      "language": "French",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Solstice",
+      "meaning": "The turning point of light in my life, marking seasons of our love",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Zephyr",
+      "meaning": "The gentle west wind that carries the sweetness of your presence",
+      "language": "Greek",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Ealdor",
+      "meaning": "Ancient one whose wisdom flows from ancestors through time",
+      "language": "Old English",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Fyrnsidu",
+      "meaning": "Keeper of old ways and ancient wisdom that guides our path",
+      "language": "Old English",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Hamingja",
+      "meaning": "The inherited luck and spiritual power that follows your bloodline",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Wyrdweaver",
+      "meaning": "One who helps shape fate and destiny through ancient knowledge",
+      "language": "Old English",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Atavism",
+      "meaning": "The beautiful reappearance of ancestral traits in your soul",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Seiðr",
+      "meaning": "Practitioner of ancient magic that binds our souls across time",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Cynefin",
+      "meaning": "The place where your ancestors have shaped you to truly belong",
+      "language": "Welsh",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Eidolon",
+      "meaning": "The spectral image of ancestors that guides and protects you",
+      "language": "Greek",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Mnemosynon",
+      "meaning": "The living memory of those who came before, preserved in your being",
+      "language": "Greek",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Primogenitor",
+      "meaning": "The first of a lineage, carrying the strength of beginnings",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Quantum",
+      "meaning": "The smallest measure of our love that contains infinite possibilities",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Parallax",
+      "meaning": "The apparent shift in how I see the world when you're by my side",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Synaptic",
+      "meaning": "The electric connection between our minds that sparks with every touch",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Entropy",
+      "meaning": "The beautiful chaos you bring to my ordered world",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Quasar",
+      "meaning": "The brightest celestial object in my universe, outshining all stars",
+      "language": "English",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Axiom",
+      "meaning": "The self-evident truth of our love that requires no proof",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Photon",
+      "meaning": "The particle of light you bring to my darkest days",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Resonance",
+      "meaning": "The frequency at which our hearts vibrate in perfect harmony",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Catalyst",
+      "meaning": "The element that accelerates every reaction in my heart",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Nebula",
+      "meaning": "The cosmic cloud where new stars of our dreams are born",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Abyssopelagic",
+      "meaning": "Dwelling in the deepest emotional depths where only true love can survive",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Crepuscular",
+      "meaning": "One who thrives in the twilight moments between our days",
+      "language": "Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Bioluminescent",
+      "meaning": "Naturally glowing with an inner light that guides me through darkness",
+      "language": "Greek/Latin",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Symbiotic",
+      "meaning": "The perfect biological partnership where both souls flourish together",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Aphelion",
+      "meaning": "Even at your furthest point from me, still bound by gravity's embrace",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Phosphorescent",
+      "meaning": "Continuing to glow in my heart long after your touch has faded",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Dendrite",
+      "meaning": "The branching extension of your soul that reaches out to connect with mine",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Quantum Entanglement",
+      "meaning": "The phenomenon where our particles remain connected regardless of distance",
+      "language": "Latin/English",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Heliotrope",
+      "meaning": "One who always turns toward the sun of my affection",
+      "language": "Greek",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Eigenvalue",
+      "meaning": "The unchanging quality of your love through all transformations",
+      "language": "German",
+      "vibe": "Scientific"
+    },
+    {
+      "word": "Umbral",
+      "meaning": "Belonging to the shadow realm where our deepest desires dwell",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Revenant",
+      "meaning": "The returned spirit of love that refuses to remain in the past",
+      "language": "French",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Phantasmagoria",
+      "meaning": "The beautiful shifting dreamscape you create in my mind",
+      "language": "Greek",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Mausoleum",
+      "meaning": "The sacred tomb where I preserve every precious memory of us",
+      "language": "Greek",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Catafalque",
+      "meaning": "The ornate platform where I display my devotion to you",
+      "language": "Italian",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Amaranthine",
+      "meaning": "Eternally unfading, like my devotion to your darkly beautiful soul",
+      "language": "Greek",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Ossuary",
+      "meaning": "The repository of memories stripped to their essential truth",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Sepulchral",
+      "meaning": "Speaking with the hollow resonance that echoes through my empty heart without you",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Thanatopsis",
+      "meaning": "The contemplation of death that makes our love more precious",
+      "language": "Greek",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Fuliginous",
+      "meaning": "Covered in dark soot, like my soul before your light found me",
+      "language": "Latin",
+      "vibe": "Gothic"
+    },
+    {
+      "word": "Snickerdoodle",
+      "meaning": "My sweet cinnamon-dusted treasure that brings comfort with every bite",
+      "language": "German/English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Wibble-Wobble",
+      "meaning": "The way my heart jiggles when you enter the room",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Snorfle",
+      "meaning": "The adorable sound you make when laughing through your nose",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Bumfuzzle",
+      "meaning": "The state of confusion you create with your unexpected cuteness",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Lollygag",
+      "meaning": "One who delightfully dawdles, making me slow down to appreciate life",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Whirligig",
+      "meaning": "My spinning top of joy that never seems to stop twirling",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Cattywampus",
+      "meaning": "Delightfully askew in all the ways that make my heart smile",
+      "language": "American",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Gobbledygook",
+      "meaning": "The nonsensical language of love that only we understand",
+      "language": "English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Flibbertigibbet",
+      "meaning": "The flighty spirit whose unpredictability brings joy to my days",
+      "language": "Middle English",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Brouhaha",
+      "meaning": "The excited commotion you create in my otherwise quiet heart",
+      "language": "French",
+      "vibe": "Silly"
+    },
+    {
+      "word": "Petrichor",
+      "meaning": "The earthy scent after rain that reminds me of our new beginnings",
+      "language": "Greek",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Pyroclastic",
+      "meaning": "The explosive heat of your passion that transforms everything it touches",
+      "language": "Greek",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Selcouth",
+      "meaning": "Rare and wondrous, like the elemental magic we create together",
+      "language": "Old English",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Empyrean",
+      "meaning": "The highest heaven of pure elemental fire where our love burns eternal",
+      "language": "Greek",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Susurrus",
+      "meaning": "The whispering wind that carries secrets between our souls",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Crepuscular",
+      "meaning": "One who thrives in the twilight moments between light and dark",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Effervescent",
+      "meaning": "Bubbling with the elemental air that brings lightness to my spirit",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Halcyon",
+      "meaning": "The calm, peaceful days created by your tranquil elemental presence",
+      "language": "Greek",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Adamantine",
+      "meaning": "Unbreakable as the hardest element, like our bond through trials",
+      "language": "Greek",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Sylvan",
+      "meaning": "Forest spirit whose elemental connection to nature refreshes my soul",
+      "language": "Latin",
+      "vibe": "Elemental"
+    },
+    {
+      "word": "Progenitor",
+      "meaning": "The ancestral source from which all good things in my life flow",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Wyrd",
+      "meaning": "The ancestral fate that wove our destinies together before birth",
+      "language": "Old English",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Folkvangr",
+      "meaning": "The ancestral field where our souls first recognized each other",
+      "language": "Old Norse",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Atavistic",
+      "meaning": "Carrying the primal ancestral traits that draw me to you instinctively",
+      "language": "Latin",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Hiraeth",
+      "meaning": "The ancestral homesickness for a place your soul remembers but never knew",
+      "language": "Welsh",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Saudade",
+      "meaning": "The ancestral longing for something beloved that is now distant",
+      "language": "Portuguese",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Duthsgelae",
+      "meaning": "The ancestral tale of our souls' journey through many lifetimes",
+      "language": "Old English",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Sehnsucht",
+      "meaning": "The ancestral yearning for an ideal other world beyond description",
+      "language": "German",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Eidolon",
+      "meaning": "The ancestral phantom image that guides me back to you lifetime after lifetime",
+      "language": "Greek",
+      "vibe": "Ancestral"
+    },
+    {
+      "word": "Anamnesis",
+      "meaning": "The ancestral remembrance of knowledge from past lives when I see your face",
+      "language": "Greek",
+      "vibe": "Ancestral"
+    }
+  ]
+}

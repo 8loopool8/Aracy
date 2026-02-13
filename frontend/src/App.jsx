@@ -15,23 +15,68 @@ function App() {
   const handleGenerate = async (labParams) => {
     setIsGenerating(true);
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://aracy.onrender.com';
-      const res = await fetch(`${apiUrl}/api/lab/generate`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(labParams),
+      const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://localhost:8000'
+        : 'https://aracy.onrender.com';
+      
+      console.log('🔮 Initiating Transmutation...', {
+        endpoint: `${API_URL}/api/lab/generate`,
+        params: labParams
       });
+      
+      const res = await fetch(`${API_URL}/api/lab/generate`, {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          style: labParams.style,
+          language: labParams.language,
+          catalysts: labParams.catalysts,
+          vibe: labParams.vibe
+        }),
+      });
+      
+      console.log('📡 Response received:', {
+        status: res.status,
+        statusText: res.statusText,
+        ok: res.ok
+      });
+      
       if (res.ok) {
         const data = await res.json();
-        setAlints(data.endearments);
-        setActiveTab('ritual'); // Auto-switch to RITUAL tab
+        console.log('✨ Alints generated:', data);
+        
+        if (data.alints && data.alints.length > 0) {
+          setAlints(data.alints);
+          setActiveTab('ritual'); // Auto-switch to RITUAL tab
+          console.log('🎯 Switched to RITUAL tab with', data.alints.length, 'alints');
+        } else if (data.endearments && data.endearments.length > 0) {
+          setAlints(data.endearments);
+          setActiveTab('ritual'); // Auto-switch to RITUAL tab
+          console.log('🎯 Switched to RITUAL tab with', data.endearments.length, 'endearments');
+        } else {
+          throw new Error('The cosmic forge returned empty... no alints were created.');
+        }
       } else {
-        console.error('API Error:', res.status, await res.text());
-        alert(`Generation failed: ${res.status}. Check console for details.`);
+        const errorText = await res.text();
+        console.error('❌ API Error:', {
+          status: res.status,
+          statusText: res.statusText,
+          body: errorText
+        });
+        
+        alert(`🌙 The elements are unstable...\n\nStatus: ${res.status}\nMessage: ${errorText}\n\nCheck the console for the true cause of this disturbance.`);
       }
     } catch (err) {
-      console.error('Generation failed:', err);
-      alert(`Network error: ${err.message}`);
+      console.error('💥 Transmutation failed:', err);
+      
+      if (err.message.includes('Failed to fetch')) {
+        alert(`🔥 The alchemical connection has been severed...\n\nCannot reach the backend at:\n${API_URL}\n\nEnsure the backend is running and CORS is configured.\n\nError: ${err.message}`);
+      } else {
+        alert(`⚗️ The transmutation ritual encountered an anomaly...\n\nError: ${err.message}\n\nConsult the console for deeper insights.`);
+      }
     } finally {
       setIsGenerating(false);
     }
@@ -89,7 +134,7 @@ function App() {
       <div className="relative z-20 min-h-screen flex flex-col items-center py-6 px-4">
         {/* Maximalist Header with Art Nouveau Frame - FIXED HEIGHT */}
         <motion.header
-          className="w-full max-w-md mb-6 relative h-32"
+          className="w-full max-w-md mb-6 relative h-32 z-50"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -114,10 +159,11 @@ function App() {
           </div>
 
           {/* Title with Quote - ALWAYS VISIBLE */}
-          <div className="text-center py-4 relative">
+          <div className="text-center py-4 relative z-50">
             <motion.h1
-              className="text-5xl font-bold tracking-[0.3em] text-goth-gold mb-2"
+              className="text-5xl font-bold tracking-[0.3em] mb-2"
               style={{
+                color: '#d4af37',
                 textShadow: '0 0 20px #d4af37, 0 0 40px #d4af37',
                 fontFamily: 'Cinzel, serif',
               }}

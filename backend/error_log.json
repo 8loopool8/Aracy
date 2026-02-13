@@ -1,1 +1,146 @@
-[]
+[
+  {
+    "timestamp": "2026-02-13T12:51:34",
+    "level": "INFO",
+    "message": "Alint 'Aethonixa' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Luminawhisper' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Elyriaxys' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Nebulaluna' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Caelestis' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Stellalux' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Astralys' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Etherealux' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Celestiana' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Lyraxys' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:35",
+    "level": "INFO",
+    "message": "Alint 'Arcanawhisper' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:37",
+    "level": "INFO",
+    "message": "Existing alint 'Ineffable' marked as crystallized",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:37",
+    "level": "INFO",
+    "message": "Existing alint 'Vorfreude' marked as crystallized",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T12:51:37",
+    "level": "INFO",
+    "message": "Existing alint 'Mamihlapinatapai' marked as crystallized",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Astrumine' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Souluxia' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Nebulon' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Velatus' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Luminawing' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Stellaluna' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Auroraea' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Catalysia' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Obsidianite' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T14:05:44",
+    "level": "INFO",
+    "message": "Alint 'Elysiumine' added to vault",
+    "ignored": false
+  }
+]
