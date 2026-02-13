@@ -142,5 +142,71 @@
     "level": "INFO",
     "message": "Alint 'Elysiumine' added to vault",
     "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:50",
+    "level": "INFO",
+    "message": "Alint 'Astrumiu' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:50",
+    "level": "INFO",
+    "message": "Alint 'Catalyxia' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:50",
+    "level": "INFO",
+    "message": "Alint 'Sideralis' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:50",
+    "level": "INFO",
+    "message": "Alint 'Cosmion' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:50",
+    "level": "INFO",
+    "message": "Alint 'Kaleekoi' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:50",
+    "level": "INFO",
+    "message": "Alint 'Elyriux' added to vault",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:58",
+    "level": "INFO",
+    "message": "Existing alint 'Vorfreude' marked as crystallized",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:58",
+    "level": "INFO",
+    "message": "Existing alint 'Auroraea' marked as crystallized",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:58",
+    "level": "INFO",
+    "message": "Existing alint 'Luminawhisper' marked as crystallized",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:58",
+    "level": "INFO",
+    "message": "Existing alint 'Cosmion' marked as crystallized",
+    "ignored": false
+  },
+  {
+    "timestamp": "2026-02-13T15:27:59",
+    "level": "INFO",
+    "message": "Existing alint 'Aethonixa' marked as crystallized",
+    "ignored": false
   }
 ]

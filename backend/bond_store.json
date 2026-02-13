@@ -1,0 +1,50 @@
+{
+  "bonds": {
+    "demo-bond-id": {
+      "crystallized": [
+        {
+          "word": "Vorfreude",
+          "meaning": "The joyful, intense anticipation that comes from imagining future pleasures",
+          "language": "Unknown",
+          "vibe": "Deep",
+          "timestamp": "2026-02-13T15:27:59.044815"
+        },
+        {
+          "word": "Auroraea",
+          "meaning": "The dawn of love, painted with hues of rose and celestial wonder",
+          "language": "Unknown",
+          "vibe": "Deep",
+          "timestamp": "2026-02-13T15:27:59.044830"
+        },
+        {
+          "word": "Luminawhisper",
+          "meaning": "Soft murmurs that illuminate the path to transcendent love",
+          "language": "Unknown",
+          "vibe": "Deep",
+          "timestamp": "2026-02-13T15:27:59.044835"
+        },
+        {
+          "word": "Cosmion",
+          "meaning": "A spark of the universe, reflected in the depths of blue eyes",
+          "language": "Unknown",
+          "vibe": "Deep",
+          "timestamp": "2026-02-13T15:27:59.044837"
+        },
+        {
+          "word": "Aethonixa",
+          "meaning": "The alchemical fusion of celestial music and heartbeats",
+          "language": "Unknown",
+          "vibe": "Deep",
+          "timestamp": "2026-02-13T15:27:59.044839"
+        }
+      ],
+      "reflected": [
+        2,
+        14,
+        15,
+        13,
+        16
+      ]
+    }
+  }
+}

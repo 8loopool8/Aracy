@@ -310,7 +310,7 @@
       "language": "German",
       "vibe": "Deep",
       "crystallized": true,
-      "crystallized_date": "2026-02-13T12:51:37.268344"
+      "crystallized_date": "2026-02-13T15:27:58.694128"
     },
     {
       "word": "Philocalist",
@@ -622,13 +622,17 @@
       "word": "Aethonixa",
       "meaning": "One whose essence is woven with the celestial tapestry of stars and dreams",
       "language": "en",
-      "vibe": "deep"
+      "vibe": "deep",
+      "crystallized": true,
+      "crystallized_date": "2026-02-13T15:27:58.988763"
     },
     {
       "word": "Luminawhisper",
       "meaning": "A gentle breeze that carries the soft luminescence of the soul",
       "language": "en",
-      "vibe": "deep"
+      "vibe": "deep",
+      "crystallized": true,
+      "crystallized_date": "2026-02-13T15:27:58.835353"
     },
     {
       "word": "Elyriaxys",
@@ -10768,7 +10772,9 @@
       "word": "Auroraea",
       "meaning": "One whose love shines bright as the aurora borealis, a celestial spectacle of breathtaking beauty",
       "language": "en",
-      "vibe": "deep"
+      "vibe": "deep",
+      "crystallized": true,
+      "crystallized_date": "2026-02-13T15:27:58.762521"
     },
     {
       "word": "Catalysia",
@@ -10785,6 +10791,44 @@
     {
       "word": "Elysiumine",
       "meaning": "A gentle lover whose touch transports us to a realm of transcendent bliss, a paradise of the soul",
+      "language": "en",
+      "vibe": "deep"
+    },
+    {
+      "word": "Astrumiu",
+      "meaning": "Celestial harmony embodied in tender moments",
+      "language": "en",
+      "vibe": "deep"
+    },
+    {
+      "word": "Catalyxia",
+      "meaning": "The entwined dance of molecular love and cosmic connection",
+      "language": "en",
+      "vibe": "deep"
+    },
+    {
+      "word": "Sideralis",
+      "meaning": "The cosmic whisperer of secrets, hidden within the heart",
+      "language": "en",
+      "vibe": "deep"
+    },
+    {
+      "word": "Cosmion",
+      "meaning": "A spark of the universe, reflected in the depths of blue eyes",
+      "language": "en",
+      "vibe": "deep",
+      "crystallized": true,
+      "crystallized_date": "2026-02-13T15:27:58.913004"
+    },
+    {
+      "word": "Kaleekoi",
+      "meaning": "The mystical convergence of artistic souls, bound by cosmic threads",
+      "language": "en",
+      "vibe": "deep"
+    },
+    {
+      "word": "Elyriux",
+      "meaning": "The poetic echoes of a love that resonates across the expanse of the universe",
       "language": "en",
       "vibe": "deep"
     }
